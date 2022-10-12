@@ -1,0 +1,96 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <RelativeLayout
+            android:id="@+id/scr"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/scrl"
+            android:layout_weight="9"
+            tools:context="boommba.apps.prototype.draggablemapviewandroid.MapsActivity">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                class="com.ornet.kml.WorkaroundMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/marker"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_above="@+id/empty_view"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_drop_pin"
+                android:text="TextView" />
+            <View
+                android:id="@+id/empty_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerInParent="true"/>
+
+<!--            <TextView-->
+<!--                android:id="@+id/resultText"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:background="#8c000000"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:padding="5dp"-->
+<!--                android:textAppearance="@style/TextAppearance.AppCompat.Small"-->
+<!--                android:textColor="#ffffff" />-->
+
+        </RelativeLayout>
+
+        <!--        <fragment-->
+        <!--            android:id="@+id/map"-->
+        <!--            android:name="com.google.android.gms.maps.SupportMapFragment"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:layout_weight="9.5" />-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnDraw"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="1dp"
+                android:layout_weight="1"
+                android:text="Draw"
+                android:insetTop="0dp"
+                android:insetBottom="0dp" />
+
+            <Button
+                android:id="@+id/btnclear"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Clear"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"/>
+
+
+        </LinearLayout>
+
+        <!--        <ImageButton-->
+        <!--            android:id="@+id/btnlock"-->
+        <!--            android:layout_width="30dp"-->
+        <!--            android:layout_height="30dp"-->
+        <!--            android:layout_marginTop="5dp"-->
+        <!--            android:background="@color/white" />-->
+
+
+
+    </LinearLayout>
+</layout>
